@@ -3,52 +3,58 @@ class BottomNavigation extends HTMLElement {
   
     constructor() {
       super();
-      const nav_tag = document.createElement('nav');
-      const ancor_tag = document.createElement('a');
-      const ancor_tag1 = document.createElement('a');
-      ancor_tag.innerHTML = "Home";
-      ancor_tag1.innerHTML = "📞 Hotlines";
       const shadowRoot = this.attachShadow({ mode: 'open' });
       shadowRoot.innerHTML = `
-        <style>
-          *{
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
-          nav{
-            display: flex;
-            justify-content: space-around;
-            background: #8E2DE2;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
-            background: linear-gradient(to right, #4A00E0, #8E2DE2);
-            opacity: 90%;
-            padding: 12px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-          }
-  
-          .nav-item{
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            padding: 12px;
-            justify-content: space-around;
-          }
-          
-          .
-
-        </style>
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Pacifico&display=swap');
+      *{
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background: #8E2DE2;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  
+        background: linear-gradient(to right, #4A00E0, #8E2DE2);
+        opacity: 90%;
+        padding: 12px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 12%;
+      }
+    
+      .nav-item{
+        font-family: sans-serif;
+        font-size: 20px;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .nav-item img{
+        display: block; 
+        margin-bottom: 7px;
+        width: 30px;
+      }
+    </style>
+    
         <nav>
-          <img src="../Assets/Icons/homeIcon.png"/>
+            <a class="nav-item" href="#">
+              <img src="../Assets/Icons/homeIcon.png"/>
+              Home
+            </a>  
           <a class="nav-item" href="#">
-            ${ancor_tag.innerHTML}
-          </a>
-  
-          <a class="nav-item" href="#">
-            ${ancor_tag1.innerHTML}
+            <img src="../Assets/Icons/phone_call_icon.png"/>
+            Hotlines
           </a>
         </nav>
       `;
