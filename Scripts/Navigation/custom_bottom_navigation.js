@@ -27,7 +27,6 @@ class BottomNavigation extends HTMLElement {
         width: 100%;
         height: 12%;
       }
-    
       .nav-item{
         font-family: sans-serif;
         font-size: 20px;
@@ -58,7 +57,6 @@ class BottomNavigation extends HTMLElement {
           </a>
         </nav>
       `;
-
     }
   }
   

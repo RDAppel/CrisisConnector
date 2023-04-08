@@ -1,10 +1,11 @@
 * {
     margin: 0px;
     padding: 0px;
-    background: linear-gradient(135deg, #0F2027, #2C5364);
+  }
+
+body {
+  background-color: #673ab7; 
 }
-
-
 /* styles.css for Navbar Start */
 .navbar {
     font-family: 'Arial', sans-serif;
@@ -83,4 +84,18 @@
   
   /* styles.css for Navbar End */
   
-  
+  /* styles.css for Hotline List Start */
+  #table {
+    margin: 0 auto; 
+    color: white;
+
+  } 
+  #table th {
+    background-color:#512DA8; 
+    border: 0px solid white;
+  }
+  #table td {
+    background-color:#673ab7; 
+    text-align: left; 
+    border-bottom: 1px solid white;
+  } 
