@@ -2,27 +2,36 @@
 
 // Declaring variables
 const hotlineList_thead = document.getElementById('hotlineList_thead');
+const hotlineList_tbody = document.getElementById('hotlineList_tbody');
 
 
-// Creating Elements
-const tr = document.createElement('tr');
-const th = document.createElement('th');
-
-
-
+// Listing the different types for a Hotline Category
 (async () => {
     const hotlineData = await getHotlineData()
-    console.log({ hotlineData })
     const types = getTypesFromJson(hotlineData);
-    console.log({ types })
     types.forEach(types =>  {
+        const tr = document.createElement('tr');
+        const td = document.createElement('td');
+        td.innerHTML = types;
+        tr.appendChild(td);
+        hotlineList_tbody.appendChild(tr);
+    });
+})(); // () will invoke (It will call it right away)
+
+/*
+(async () => {
+    const hotlineData = await getHotlineData()
+    console.log(hotlineData.data.mentalHealth);
+    hotlineData.data.forEach(hotlineName => {
         const tr = document.createElement('tr');
         const th = document.createElement('th');
         th.innerHTML = types;
+        th.style = "text-align:center";
         tr.appendChild(th);
         hotlineList_thead.appendChild(tr);
     });
 })(); // () will invoke (It will call it right away)
+*/
 
 // Reading the data from the server
 async function getHotlineData() {
