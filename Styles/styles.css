@@ -1,4 +1,86 @@
 * {
     margin: 0px;
     padding: 0px;
+    background: linear-gradient(135deg, #0F2027, #2C5364);
 }
+
+
+/* styles.css for Navbar Start */
+.navbar {
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  .logo-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  
+  .navbar-brand img {
+    height: 80px; /* Increase the height of the logo */
+    width: auto;
+  }
+  
+  .nav-item {
+    position: relative;
+  }
+  
+  .nav-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.5s;
+    transform-origin: center;
+    backface-visibility: hidden;
+  }
+  
+  .nav-link::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: rotateX(90deg);
+    transition: transform 0.5s;
+    transform-origin: center;
+    backface-visibility: hidden;
+  }
+  
+  .nav-link:hover {
+    transform: rotateX(90deg);
+  }
+  
+  .nav-link:hover::before {
+    transform: rotateX(0deg);
+  }
+  
+  .nav-center {
+    justify-content: center; /* Center the navigation links */
+    margin: 0 auto; /* Add automatic margins to center the unordered list */
+  }
+  
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      z-index: 2; /* Increase z-index to ensure links appear above the logo */
+    }
+  
+    .logo-wrapper {
+      top: 10px; /* Adjust logo position on mobile */
+      transform: translateY(0);
+    }
+  
+    .navbar-brand img {
+      height: 50px; /* Adjust logo size on mobile */
+    }
+  }
+  
+  /* styles.css for Navbar End */
+  
+  
