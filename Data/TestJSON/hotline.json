@@ -1,0 +1,66 @@
+{
+    "health_issues": [
+      {
+        "issue": "Depression",
+        "description": "Depression is a common and serious medical illness that negatively affects how you feel, the way you think and how you act. It causes feelings of sadness and/or a loss of interest in activities once enjoyed. It can lead to a variety of emotional and physical problems and can decrease a person’s ability to function at work and home.",
+        "symptoms": [
+          "Persistent sad, anxious, or 'empty' mood",
+          "Feelings of hopelessness or pessimism",
+          "Irritability",
+          "Loss of interest in hobbies and activities",
+          "Fatigue and decreased energy",
+          "Difficulty concentrating, remembering, or making decisions",
+          "Insomnia, early-morning awakening, or oversleeping",
+          "Appetite and/or weight changes",
+          "Thoughts of death or suicide"
+        ]
+      },
+      {
+        "issue": "Anxiety",
+        "description": "Anxiety disorders are a group of mental disorders characterized by significant feelings of anxiety and fear. Anxiety is a normal response to stress, but when it becomes excessive and interferes with daily life, it can be considered a disorder. There are several types of anxiety disorders, including generalized anxiety disorder, panic disorder, and social anxiety disorder.",
+        "symptoms": [
+          "Excessive worrying",
+          "Restlessness or feeling keyed up or on edge",
+          "Difficulty concentrating or mind going blank",
+          "Irritability",
+          "Muscle tension",
+          "Sleep disturbances",
+          "Panic attacks (sudden onset of fear or discomfort that reaches a peak within minutes)"
+        ]
+      },
+      {
+        "issue": "Bipolar Disorder",
+        "description": "Bipolar disorder, also known as manic-depressive illness, is a brain disorder that causes unusual shifts in mood, energy, activity levels, and the ability to carry out day-to-day tasks. Symptoms can be severe and include episodes of mania and depression.",
+        "symptoms": [
+          "Manic episodes (periods of elevated or irritable mood, increased energy, decreased need for sleep, racing thoughts, impulsivity)",
+          "Depressive episodes (periods of low mood, decreased energy, feelings of worthlessness or guilt, difficulty concentrating, thoughts of death or suicide)"
+        ]
+      },
+      {
+        "issue": "Diabetes",
+        "description": "Diabetes is a chronic condition that affects how your body processes blood sugar (glucose). It is characterized by high levels of glucose in the blood, which can lead to a variety of health problems over time.",
+        "symptoms": [
+          "Frequent urination",
+          "Excessive thirst",
+          "Increased hunger",
+          "Fatigue",
+          "Blurred vision",
+          "Slow-healing sores or cuts",
+          "Unexplained weight loss"
+        ]
+      },
+      {
+        "issue": "High Cholesterol",
+        "symptoms": [
+          "Chest pain",
+          "Shortness of breath",
+          "Numbness or tingling in hands or feet",
+          "Headache",
+          "Blurry vision",
+          "Fatigue",
+          "Digestive problems"
+        ]
+      }
+    ]
+  }
+  
