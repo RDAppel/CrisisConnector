@@ -13,9 +13,9 @@ const th = document.createElement('th');
 (async () => {
     const hotlineData = await getHotlineData()
     console.log({ hotlineData })
-    const types = getIssuesFromJson(hotlineData);
-    console.log({ issues })
-    issues.forEach(types =>  {
+    const types = getTypesFromJson(hotlineData);
+    console.log({ types })
+    types.forEach(types =>  {
         const tr = document.createElement('tr');
         const th = document.createElement('th');
         th.innerHTML = types;
@@ -34,10 +34,10 @@ async function getHotlineData() {
     }
 }
 
-function getIssuesFromJson(data) {
+function getTypesFromJson(data) {
     console.log(data);
     return data?.mentalHealth?.map(types => types.types); 
-    /* Lopping and getting the issues from the .jsonx
+    /* Lopping and getting the types from the .jsonx
     The question mark means that a data can be null, this is so that the program doesn't crash */
 }
 
