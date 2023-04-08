@@ -1,3 +1,5 @@
+// Note to self: when the search go the db and do the where for the serach .Timeout
+
 // Declaring variables
 const hotlineList_thead = document.getElementById('hotlineList_thead');
 
@@ -9,15 +11,24 @@ const th = document.createElement('th');
 
 
 (async () => {
-    console.log(getIssuesFromJson(await getHotlineData()));
+    const hotlineData = await getHotlineData()
+    console.log({ hotlineData })
+    const types = getIssuesFromJson(hotlineData);
+    console.log({ issues })
+    issues.forEach(types =>  {
+        const tr = document.createElement('tr');
+        const th = document.createElement('th');
+        th.innerHTML = types;
+        tr.appendChild(th);
+        hotlineList_thead.appendChild(tr);
+    });
 })(); // () will invoke (It will call it right away)
 
 // Reading the data from the server
 async function getHotlineData() {
     try {
       const response = await fetch("https://raw.githubusercontent.com/BhuwanTiwari2002/CrisisConnector/master/Data/TestJSON/hotline.json");
-      const data = await response.json();
-      return data;
+      return await response.json();
     } catch (error) {
       console.error(error);
     }
@@ -25,6 +36,8 @@ async function getHotlineData() {
 
 function getIssuesFromJson(data) {
     console.log(data);
-    return issues = data.health_issues.map(issue => issue.issue); // Lopping and getting the issues from the .json
+    return data?.mentalHealth?.map(types => types.types); 
+    /* Lopping and getting the issues from the .jsonx
+    The question mark means that a data can be null, this is so that the program doesn't crash */
 }
 
