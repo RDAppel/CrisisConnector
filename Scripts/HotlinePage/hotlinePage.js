@@ -6,26 +6,25 @@ const hotlineList_thead = document.getElementById('hotlineList_thead');
 const tr = document.createElement('tr');
 const th = document.createElement('th');
 
-// Appending to the document
 
 
-getFileButton.onchange = function() 
-{
-    try
-    {
-        let JSONfile = this.files[0];
-        // Instance of the FileReader Class
-        const fr = new FileReader();
-        // Reading the json file
-        fr.readAsText(JSONfile);
-        // Onces the file has finished loading, parse the JSON file
-        fr.onload = function() 
-        {
-            let hangmanWords = JSON.parse(fr.result);
-        }
-    } catch(ex)
-    {
-        console.log(ex);
+(async () => {
+    console.log(getIssuesFromJson(await getHotlineData()));
+})(); // () will invoke (It will call it right away)
+
+// Reading the data from the server
+async function getHotlineData() {
+    try {
+      const response = await fetch("https://raw.githubusercontent.com/BhuwanTiwari2002/CrisisConnector/master/Data/TestJSON/hotline.json");
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error(error);
     }
-
 }
+
+function getIssuesFromJson(data) {
+    console.log(data);
+    return issues = data.health_issues.map(issue => issue.issue); // Lopping and getting the issues from the .json
+}
+
