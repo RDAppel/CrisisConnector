@@ -6,7 +6,10 @@
         "name": "Depression"
       },
       {
-        "name": "Anxiety"
+        "name": "Anxiety Disorder"
+      }, 
+      {
+        "name": "Bipolar Disorders"
       }
     ]
   },
@@ -18,6 +21,17 @@
       },
       {
         "name": "Eating Nervosa"
+      }
+    ]
+  },
+  {
+    "title": "Test disorder",
+    "types": [
+      {
+        "name": "Test Nervosa"
+      },
+      {
+        "name": "Test Nervosa"
       }
     ]
   }

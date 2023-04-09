@@ -20,10 +20,8 @@ async function getHotlineData() {
     }
 }
 
-
-
 function displayHotlines(data) {
-    data?.forEach(({title,types}) => {
+    data?.forEach(({title,types}) => { // { Destructing the Object }
         const tr = document.createElement('tr');
         const th = document.createElement('th');
         th.innerHTML = title;
@@ -38,10 +36,5 @@ function displayHotlines(data) {
             table.appendChild(tr);
         });
     });
-  
-    
-    
-    /* Lopping and getting the types from the .jsonx
-    The question mark means that a data can be null, this is so that the program doesn't crash */
 }
 

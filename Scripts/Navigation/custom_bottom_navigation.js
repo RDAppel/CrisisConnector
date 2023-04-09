@@ -44,18 +44,17 @@ class BottomNavigation extends HTMLElement {
         margin-bottom: 7px;
         width: 30px;
       }
-    </style>
-    
-        <nav>
-            <a class="nav-item" href="#">
-              <img src="../Assets/Icons/homeIcon.png"/>
-              Home
-            </a>  
-          <a class="nav-item" href="#">
-            <img src="../Assets/Icons/phone_call_icon.png"/>
-            Hotlines
-          </a>
-        </nav>
+    </style>    
+    <nav>
+        <a class="nav-item" href="#">
+          <img src="../Assets/Icons/homeIcon.png"/>
+          Home
+        </a>  
+      <a class="nav-item" href="#">
+        <img src="../Assets/Icons/phone_call_icon.png"/>
+        Hotlines
+      </a>
+    </nav>
       `;
     }
   }
