@@ -34,6 +34,17 @@
         "name": "Test Nervosa"
       }
     ]
+  },
+  {
+    "title": "Sleep",
+    "types": [
+      {
+        "name": "Nervosa"
+      },
+      {
+        "name": "Can't Sleep"
+      }
+    ]
   }
 ]
 
