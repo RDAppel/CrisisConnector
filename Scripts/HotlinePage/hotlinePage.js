@@ -31,10 +31,13 @@ function displayHotlines(data) {
       hotlineList.appendChild(hotlineTitle);
       hotlineTitle.appendChild(hotlineH2);
       hotlineTitle.appendChild(hotlineName);
+      
       types.forEach(({name}) => {
-        const hotlineParagraph = document.createElement('p');
-        hotlineParagraph.innerHTML = name;
-        hotlineName.appendChild(hotlineParagraph);
+        const hotlineLink = document.createElement('a');
+        hotlineLink.innerHTML = name;
+        hotlineLink.href = 'www.google.com';
+        hotlineLink.target = '_blank'; // Set target to _blank to open the link in a new tab
+        hotlineName.appendChild(hotlineLink); 
       });
       document.body.appendChild(hotlineList);
     });

@@ -116,9 +116,16 @@ body {
     background-color:#512DA8; 
   }
 
-  #hotlineName p{
-    background-color:#673ab7; 
+
+
+  #hotlineName a{
+    background-color:#673ab7;
     border-bottom: 1px solid white;
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
     padding-left: 5px;
+    color: #fff;
+    text-decoration: none;
   }
+ 
