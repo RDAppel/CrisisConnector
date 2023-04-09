@@ -32,10 +32,10 @@ function displayHotlines(data) {
       hotlineTitle.appendChild(hotlineH2);
       hotlineTitle.appendChild(hotlineName);
       
-      types.forEach(({name}) => {
+      types.forEach(({name, link}) => {
         const hotlineLink = document.createElement('a');
         hotlineLink.innerHTML = name;
-        hotlineLink.href = 'www.google.com';
+        hotlineLink.href = link;
         hotlineLink.target = '_blank'; // Set target to _blank to open the link in a new tab
         hotlineName.appendChild(hotlineLink); 
       });
