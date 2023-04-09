@@ -80,7 +80,7 @@ class CustomNavbar extends HTMLElement {
           }
 
           .nav-open {
-            background-image: linear-gradient(to right,#0F2027, #2C5364);
+            background-image: linear-gradient(to top, #512DA8, #673AB7);
           }
           
           .nav-toggle {
@@ -89,13 +89,13 @@ class CustomNavbar extends HTMLElement {
             justify-content: space-between;
             align-items: center;
             width: 30px;
+            
             height: 21px;
             cursor: pointer;
             position: relative;
           }
           
           .nav-toggle span {
-            display: block;
             height: 3px;
             width: 100%;
             background-color: #000;
