@@ -3,13 +3,16 @@
     "title": "Mental health",
     "types": [
       {
-        "name": "Depression"
+        "name": "Depression",
+        "link": "https://www.google.com/"
       },
       {
-        "name": "Anxiety Disorder"
+        "name": "Anxiety Disorder",
+        "link": "https://www.google.com/"
       }, 
       {
-        "name": "Bipolar Disorders"
+        "name": "Bipolar Disorders",
+        "link": "https://www.google.com/"
       }
     ]
   },
@@ -17,10 +20,12 @@
     "title": "Eating disorder",
     "types": [
       {
-        "name": "Anorexia Nervosa"
+        "name": "Anorexia Nervosa",
+        "link": "https://www.google.com/"
       },
       {
-        "name": "Eating Nervosa"
+        "name": "Eating Nervosa",
+        "link": "https://www.google.com/"
       }
     ]
   },
@@ -28,10 +33,12 @@
     "title": "Test disorder",
     "types": [
       {
-        "name": "Test Nervosa"
+        "name": "Test Nervosa",
+        "link": "https://www.google.com/"
       },
       {
-        "name": "Test Nervosa"
+        "name": "Test Nervosa",
+        "link": "https://www.google.com/"
       }
     ]
   },
@@ -39,10 +46,12 @@
     "title": "Sleep",
     "types": [
       {
-        "name": "Nervosa"
+        "name": "Nervosa",
+        "link": "https://www.google.com/"
       },
       {
-        "name": "Can't Sleep"
+        "name": "Can't Sleep",
+        "link": "https://www.google.com/"
       }
     ]
   }
