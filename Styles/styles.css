@@ -109,7 +109,9 @@ body {
 
   #hotlineTitle h2 {
     font-size: 23.5px;
-    text-align: center;
+    height: 35px;
+    display: flex;
+    justify-content: center;
     font-weight: bold;
     background-color:#512DA8; 
   }
