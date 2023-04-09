@@ -1,10 +1,5 @@
 // Note to self: when the search go the db and do the where for the serach .Timeout
 
-// Declaring variables
-const table = document.getElementById('table');
-const hotlineList = document.getElementById('hotlineList');
-
-
 
 // Displays the Hotline Data
 (async () => {
@@ -21,9 +16,11 @@ async function getHotlineData() {
     }
 }
 
-function displayHotlines(data) {
-    data?.forEach(({title, types}) => {
+function displayHotlines(data) {  
+      data?.forEach(({title, types}) => {
       const hotlineList = document.createElement('div');
+      hotlineList.style = "margin-top: 10px";
+      hotlineList.className = "searchHotline";
       const hotlineTitle = document.createElement('div');
       const hotlineH2 = document.createElement('h2');
       const hotlineName = document.createElement('div');
@@ -34,14 +31,24 @@ function displayHotlines(data) {
       hotlineList.appendChild(hotlineTitle);
       hotlineTitle.appendChild(hotlineH2);
       hotlineTitle.appendChild(hotlineName);
-  
       types.forEach(({name}) => {
         const hotlineParagraph = document.createElement('p');
         hotlineParagraph.innerHTML = name;
         hotlineName.appendChild(hotlineParagraph);
       });
-  
       document.body.appendChild(hotlineList);
     });
   }
+  
+  $(document).ready(function() {
+    $("#search").on("keyup", function() {
+      var searchText = $(this).val().toLowerCase();
+      $(".searchHotline").find("h2, p").filter(function() {
+        return $(this).text().toLowerCase().indexOf(searchText) > -1;
+      }).show();
+      $(".searchHotline").find("h2, p").filter(function() {
+        return $(this).text().toLowerCase().indexOf(searchText) === -1;
+      }).hide();
+    });
+  });
   

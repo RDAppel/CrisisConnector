@@ -8,17 +8,18 @@
     <link rel="stylesheet" type="text/css" href="../Styles/styles.css" />
     <script src="../Scripts/Navigation/custom_navabar.js" defer></script>
     <script src="../Scripts/HotlinePage/hotlinePage.js" defer></script>
+    <!-- Importing JQuery -->
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css" />
     <title>Hotline Page</title>
 </head>
 <body>
     <custom-navbar></custom-navbar>
     <form>
-        <div class="form-group mt-3">
-            <input style="width: 95%; margin: auto; color: black; opacity:90%;" type="text" type="text" class="form-control" placeholder="🔍 Search Hotline">
+        <div class="form-group mt-3" >
+            <input style="width: 95%; margin: auto; color: black; opacity:90%;" type="text" type="text" id="search" class="form-control" placeholder="🔍 Search Hotline">
         </div>
     </form>
-        <div id="hotlineList" class="mt-2">
-
-        </div>
 </body>
 </html>
