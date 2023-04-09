@@ -2,6 +2,7 @@
 
 // Declaring variables
 const table = document.getElementById('table');
+const hotlineList = document.getElementById('hotlineList');
 
 
 
@@ -21,20 +22,26 @@ async function getHotlineData() {
 }
 
 function displayHotlines(data) {
-    data?.forEach(({title,types}) => { // { Destructing the Object }
-        const tr = document.createElement('tr');
-        const th = document.createElement('th');
-        th.innerHTML = title;
-        th.style = "text-align:center";
-        tr.appendChild(th);
-        table.appendChild(tr);
-        types.forEach(({name}) => {
-            const tr = document.createElement('tr');
-            const td = document.createElement('td');
-            td.innerHTML = name;
-            tr.appendChild(td);
-            table.appendChild(tr);
-        });
+    data?.forEach(({title, types}) => {
+      const hotlineList = document.createElement('div');
+      const hotlineTitle = document.createElement('div');
+      const hotlineH2 = document.createElement('h2');
+      const hotlineName = document.createElement('div');
+      hotlineList.id = "hotlineList";
+      hotlineTitle.id = "hotlineTitle";
+      hotlineName.id = "hotlineName";
+      hotlineH2.innerHTML = title;
+      hotlineList.appendChild(hotlineTitle);
+      hotlineTitle.appendChild(hotlineH2);
+      hotlineTitle.appendChild(hotlineName);
+  
+      types.forEach(({name}) => {
+        const hotlineParagraph = document.createElement('p');
+        hotlineParagraph.innerHTML = name;
+        hotlineName.appendChild(hotlineParagraph);
+      });
+  
+      document.body.appendChild(hotlineList);
     });
-}
-
+  }
+  
