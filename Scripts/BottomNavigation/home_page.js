@@ -7,8 +7,7 @@ class HomePage extends HTMLElement {
     <style>
       .container {
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column;  
         align-items: center;
         min-height: calc(100vh - 60px); /* Assuming the navbar is 60px tall */
         padding-top: 60px; /* Assuming the navbar is 60px tall */
@@ -91,7 +90,16 @@ class HomePage extends HTMLElement {
         <div class="button-title">National Lifeline</div>
       </button>
       <div class="button-subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+      <button class="button">
+        <div class="circle"></div>
+        <div class="button-title">Hotlines</div>
+      </button>
+    
     </div>
+
+
+
+
     `;
   }
 }
