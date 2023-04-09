@@ -101,3 +101,20 @@ body {
     text-align: left; 
     border-bottom: 1px solid white;
   } 
+
+  #hotlineList {
+    margin: 0 auto; 
+    color: white;
+  }
+
+  #hotlineTitle h2 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color:#512DA8; 
+  }
+
+  #hotlineName p{
+    background-color:#673ab7; 
+    border-bottom: 1px solid white;
+  }
