@@ -4,7 +4,7 @@
   }
 
 body {
-  background-color: #673ab7; 
+  background: linear-gradient(to top, #512DA8, #673AB7); 
 }
 /* styles.css for Navbar Start */
 .navbar {
