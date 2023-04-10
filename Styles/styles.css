@@ -3,10 +3,9 @@
     padding: 0px;
   }
 
-  
-
 body {
-  background-color: #673ab7; 
+  /* background: linear-gradient(150deg, #000428, purple);  */
+  background: linear-gradient(150deg, #000428, hsl(273, 80%, 14%)); 
 }
 /* styles.css for Navbar Start */
 .navbar {
