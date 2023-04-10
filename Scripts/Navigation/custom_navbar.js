@@ -9,7 +9,7 @@ class CustomNavbar extends HTMLElement {
         text-decoration: none;
         color: #1E1E23;
         opacity:1;
-        font-family: 'work sans', sans serif;
+        font-family: sans serif;
         font-size: 1.5em;
         font-weight: 400;
         transition: 200ms;
@@ -29,8 +29,9 @@ class CustomNavbar extends HTMLElement {
         display: flex;
         flex-direction: column;
         position: relative;
-        top: 25px;
+        top: 40px;
         left: 25px;
+        
         z-index: 1;
         -webkit-user-select: none;
         user-select: none;
@@ -115,6 +116,18 @@ class CustomNavbar extends HTMLElement {
       {
         transform: none;
       }
+
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+      }
+  
+      .logo-image {
+        width: 100px;
+      }
       </style>
     <nav role="navigation">
         <div id="menuToggle">
@@ -128,7 +141,11 @@ class CustomNavbar extends HTMLElement {
             <li><a href="#">Info</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+        
         </div>
+        <div class="logo-container">
+          <img class="logo-image" src="../Assets/Icons/CrisCon.svg" alt="Brand Logo">
+      </div>
     </nav>
       `;
 
