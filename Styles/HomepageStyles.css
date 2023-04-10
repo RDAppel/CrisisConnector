@@ -20,67 +20,14 @@
   background: linear-gradient(90.05deg, rgb(181, 255, 211) 0.02%, rgb(209, 164, 255) 39.16%, rgb(255, 165, 175) 75.82%, rgb(255, 220, 164) 112%) text;
 }
 
-.button {
-  position: relative;
-  padding: 30px 20px;
-  border-radius: 28px;
-  background-color: #fd746c;
-  width: 25%;
-  text-align: center;
-  overflow: hidden;
-  color: #FFF;
-  border: none;
-  margin-bottom: 10px;
-  cursor: pointer;
-  z-index: 1;
+.custom-button {
+  font-size: 60px;
+  background-color: hsl(253, 33%, 32%);
+  color: white;
+  border: 0;
+  border-radius: 20px;
+  width: 70%;
 }
-
-.button:hover .circle {
-  transform: scale(10);
-  z-index: -1;
-  
-}
-
-.button-title {
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.button-subtitle {
-  font-size: 18px;
-  margin-bottom: 20px;
-  text-align: left !important;
-  color: #FFF;
-}
-
-.button:hover .button-title {
-  color: #512DA8;
-}
-
-.circle {
-  position: absolute;
-  top: -75px;
-  right: -75px;
-  height: 128px;
-  width: 128px;
-  background-color: #f9b234;
-  border-radius: 50%;
-  transition: all .5s ease;
-  z-index: 0;
-}
-
 @media screen and (max-width: 768px) {
-  .button {
-    width: 70%;
-  }
 
-  .button-title {
-    font-size: 24px;
-  }
-
-  .button-subtitle {
-    font-size: 16px;
-    text-align: center;
-    width: 65%;
-  }
 }

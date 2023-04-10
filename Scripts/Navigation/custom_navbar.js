@@ -35,7 +35,6 @@ class CustomNavbar extends HTMLElement {
         -webkit-user-select: none;
         user-select: none;
       }
-      
       #menuToggle input
       {
         display: flex;
@@ -51,7 +50,7 @@ class CustomNavbar extends HTMLElement {
       {
         display: flex;
         width: 29px;
-        height: 3px;
+        height: 2px;
         margin-bottom: 5px;
         position: relative;
         background: #ffffff;
