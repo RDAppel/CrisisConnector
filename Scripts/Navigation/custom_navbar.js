@@ -28,23 +28,22 @@ class CustomNavbar extends HTMLElement {
       #menuToggle {
         display: flex;
         flex-direction: column;
-        position: relative;
+        position: absolute;
         top: 40px;
-        left: 25px;
-        
+        right: 25px;
         z-index: 1;
         -webkit-user-select: none;
         user-select: none;
       }
-      #menuToggle input
-      {
-        display: flex;
+      
+      #menuToggle input {
         width: 40px;
         height: 32px;
         position: absolute;
         cursor: pointer;
         opacity: 0;
         z-index: 2;
+        right: 0; 
       }
       
       #menuToggle span
@@ -67,10 +66,15 @@ class CustomNavbar extends HTMLElement {
       {
         transform-origin: 0% 0%;
       }
+
+      #menuToggle span:nth-child(2) {
+        width: 40px;
+      }
       
       #menuToggle span:nth-last-child(2)
       {
         transform-origin: 0% 100%;
+        width: 40px;
       }
       
       #menuToggle input:checked ~ span
@@ -89,26 +93,34 @@ class CustomNavbar extends HTMLElement {
       {
         transform: rotate(-45deg) translate(0, -1px);
       }
+     
       
-      #menu
-      {
+      #menu {
+        
+        display: none;
         position: absolute;
-        width: 180px;
-        height: 400px;
+        top: 100%;
+        right: 0;
+        width: 65vw;
+        height: 300px;
         box-shadow: 0 0 10px #85888C;
-        margin: -50px 0 0 -50px;
-        padding: 50px;
-        padding-top: 125px;
+        margin: 0;
+        padding: 50px 0;
         background-color: #F5F6FA;
         -webkit-font-smoothing: antialiased;
-        transform-origin: 0% 0%;
-        transform: translate(-100%, 0);
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        transform-origin: 100% 0;
+        transform: translateX(100%);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+      }
+
+      #menuToggle input:checked ~ #menu {
+        display: block;
+        transform: translateX(0);
       }
       
       #menu li
       {
-        padding: 10px 0;
+        padding: 10px 30px;
         transition-delay: 2s;
       }
       
@@ -126,6 +138,7 @@ class CustomNavbar extends HTMLElement {
       }
   
       .logo-image {
+        margin-top: 35px;
         width: 100px;
       }
       </style>
@@ -133,8 +146,10 @@ class CustomNavbar extends HTMLElement {
         <div id="menuToggle">
             <input type="checkbox" />
             <span></span>
-            <span></span>
-            <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+
         <ul id="menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
