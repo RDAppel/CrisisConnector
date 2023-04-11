@@ -136,9 +136,9 @@ class CustomNavbar extends HTMLElement {
             <span></span>
             <span></span>
         <ul id="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Info</a></li>
+            <li><a href="../Pages/HomePage.html">Home</a></li>
+            <li><a href="../Pages/HotlinePage.html">Hotline</a></li>
+            <li><a href="../Pages/ResourcesPage.html">Resources</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
         
