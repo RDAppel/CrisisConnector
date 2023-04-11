@@ -1,0 +1,38 @@
+[
+    {
+      "category": "Depression",
+      "types": [
+        {
+          "title": "Depression",
+          "description": "Depression",
+          "details": "A group of conditions associated with the elevation or lowering of a person's mood, such as depression or bipolar disorder.",
+          "link": "https://www.google.com/"
+        },
+        {
+          "title": "Depression",
+          "description": "Depression",
+          "details": "A group of conditions associated with the elevation or lowering of a person's mood, such as depression or bipolar disorder.",
+          "link": "https://www.google.com/"
+        }
+      ]
+    },
+    {
+        "category": "Sleep",
+        "types": [
+          {
+            "title": "Sleep",
+            "description": "Sleep",
+            "details": "A group of conditions SLEEEEPP with the elevation or lowering of a person's mood, such as depression or bipolar disorder.",
+            "link": "https://www.google.com/"
+          },
+          {
+            "title": "UESS",
+            "description": "WEEEE",
+            "details": "A TEST of conditions associated with the elevation or lowering of a person's mood, such as depression or bipolar disorder.",
+            "link": "https://www.google.com/"
+          }
+        ]
+    }
+  ]
+  
+  
