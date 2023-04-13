@@ -1,5 +1,5 @@
 // Note to self: when the search go the db and do the where for the serach .Timeout
-
+const container = document.getElementById("ResourcesMainContainer");
 
 // Displays the Hotline Data
 (async () => {
@@ -16,33 +16,45 @@ async function getHotlineData() {
     }
 }
 
+
 function displayHotlines(data) {  
-       console.log(data);
-      data?.forEach(({category, types}) => {
-      const hotlineList = document.createElement('div');
-      hotlineList.style = "margin-top: 10px";
-      hotlineList.className = "searchHotline";
-      const hotlineTitle = document.createElement('div');
-      const hotlineH2 = document.createElement('h2');
-      const hotlineName = document.createElement('div');
-      hotlineList.id = "hotlineList";
-      hotlineTitle.id = "hotlineTitle";
-      hotlineName.id = "hotlineName";
-      hotlineH2.innerHTML = title;
-      hotlineList.appendChild(hotlineTitle);
-      hotlineTitle.appendChild(hotlineH2);
-      hotlineTitle.appendChild(hotlineName);
-      
-      types.forEach(({name, link}) => {
-        const hotlineLink = document.createElement('a');
-        hotlineLink.innerHTML = name;
-        hotlineLink.href = link;
-        hotlineLink.target = '_blank'; // Set target to _blank to open the link in a new tab
-        hotlineName.appendChild(hotlineLink); 
-      });
-      document.body.appendChild(hotlineList);
+  console.log(data);
+  data?.forEach(({category, types}) => {
+    const resourceGrid = document.createElement('div');
+    resourceGrid.className = "resource-grid";
+    const categoryHeading = document.createElement('h2');
+    categoryHeading.innerHTML = category;
+    categoryHeading.className = "category-title";
+    container.appendChild(categoryHeading);
+    container.appendChild(resourceGrid);
+    types.forEach(({title, description, details, link}) => {
+      const resourceItem = document.createElement('div');
+      resourceItem.className = "resource-item";
+      const resourceImage = document.createElement('img');
+      resourceImage.src = "../Assets/Images/Depression.png";
+      const resourceInfo = document.createElement('div');
+      resourceInfo.className = "resource-info";
+      resourceGrid.appendChild(resourceItem);
+      resourceItem.appendChild(resourceImage);
+      resourceItem.appendChild(resourceInfo);
+      const resourceHeading = document.createElement('h2');
+      resourceHeading.className = "resource-title";
+      const resourceParagraph = document.createElement('p');
+      resourceParagraph.className = "resource-desc"
+      const resourceAncor = document.createElement('a');
+      resourceAncor.className = "resource-link";
+      resourceHeading.innerHTML = title;
+      resourceParagraph.innerHTML = details;
+      resourceAncor.innerHTML = "Learn More";
+      resourceAncor.href = link;
+      resourceAncor.target = '_blank'; // Set target to _blank to open the link in a new tab
+      resourceInfo.appendChild(resourceHeading);
+      resourceInfo.appendChild(resourceParagraph);
+      resourceInfo.appendChild(resourceAncor);
     });
-  }
+  });
+}
+
   
 //   $(document).ready(function() {
 //     $("#search").on("keyup", function() {
