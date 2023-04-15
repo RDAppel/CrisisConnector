@@ -28,33 +28,31 @@ class CustomNavbar extends HTMLElement {
       #menuToggle {
         display: flex;
         flex-direction: column;
-        position: relative;
+        position: absolute;
         top: 40px;
-        left: 25px;
-        
+        right: 25px;
         z-index: 1;
         -webkit-user-select: none;
         user-select: none;
       }
-      #menuToggle input
-      {
-        display: flex;
+      
+      #menuToggle input {
         width: 40px;
         height: 32px;
         position: absolute;
         cursor: pointer;
         opacity: 0;
         z-index: 2;
+        right: 0; 
       }
       
-      #menuToggle span
-      {
+      #menuToggle span {
         display: flex;
         width: 29px;
         height: 2px;
         margin-bottom: 5px;
         position: relative;
-        background: #ffffff;
+        background: #ffffff !important;
         border-radius: 3px;
         z-index: 1;
         transform-origin: 5px 0px;
@@ -67,10 +65,15 @@ class CustomNavbar extends HTMLElement {
       {
         transform-origin: 0% 0%;
       }
+
+      #menuToggle span:nth-child(2) {
+        width: 40px;
+      }
       
       #menuToggle span:nth-last-child(2)
       {
         transform-origin: 0% 100%;
+        width: 40px;
       }
       
       #menuToggle input:checked ~ span
@@ -89,33 +92,66 @@ class CustomNavbar extends HTMLElement {
       {
         transform: rotate(-45deg) translate(0, -1px);
       }
+     
       
-      #menu
-      {
-        position: absolute;
-        width: 180px;
-        height: 400px;
+      #menu {
+        position: fixed;
+        top: 65px;
+        right: 0;
+        width: 20%;
+        height: 20%;
+        font-color: #ffffff;
         box-shadow: 0 0 10px #85888C;
-        margin: -50px 0 0 -50px;
-        padding: 50px;
-        padding-top: 125px;
-        background-color: #F5F6FA;
+        margin: 0;
+        padding: 50px 0;
+        background: linear-gradient(to right, #0f0c29, #302b63, #24243e); 
         -webkit-font-smoothing: antialiased;
-        transform-origin: 0% 0%;
-        transform: translate(-100%, 0);
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        transform-origin: 100% 0;
+        transform: translateX(100%);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        z-index: 999;
+      }
+      
+      @media screen and (max-width: 768px) {
+        #menu {
+          width: 30%;
+          height: 22%;
+          background: linear-gradient(to right, #0f0c29, #302b63, #24243e); 
+          
+          
+        }
+      }
+
+      #menuToggle input:checked ~ #menu {
+        display: block;
+        transform: translateX(0);
       }
       
       #menu li
       {
-        padding: 10px 0;
+        padding: 10px 30px;
         transition-delay: 2s;
+      }
+      
+      #menu li a {
+        color: #ffffff;
       }
       
       #menuToggle input:checked ~ ul
       {
         transform: none;
       }
+
+     
+        
+        
+
+        #menu li {
+          padding: 10px 20px;
+          font-size: 1.2em;
+      }
+    }
+      
 
       .logo-container {
         display: flex;
@@ -126,15 +162,18 @@ class CustomNavbar extends HTMLElement {
       }
   
       .logo-image {
-        width: 100px;
+        margin-top: -25px;
+        width: 90px;
       }
       </style>
     <nav role="navigation">
         <div id="menuToggle">
             <input type="checkbox" />
             <span></span>
-            <span></span>
-            <span></span>
+           <span></span>
+           <span></span>
+           <span></span>
+
         <ul id="menu">
             <li><a href="../Pages/HomePage.html">Home</a></li>
             <li><a href="../Pages/HotlinePage.html">Hotline</a></li>
@@ -144,7 +183,7 @@ class CustomNavbar extends HTMLElement {
         
         </div>
         <div class="logo-container">
-          <img class="logo-image" src="../Assets/Icons/CrisCon.svg" alt="Brand Logo">
+          <img class="logo-image" src="../Assets/Icons/Logo1.png" alt="Brand Logo">
       </div>
     </nav>
       `;
