@@ -1,9 +1,7 @@
 
-(async () => displayHotlines(await getHotlineData()))();
-
 const getHotlineData = async () => {
 	try {
-		const url = 'https://raw.githubusercontent.com/BhuwanTiwari2002/CrisisConnector/master/Data/TestJSON/hotline.json'
+		const url = 'https://raw.githubusercontent.com/BhuwanTiwari2002/CrisisConnector/master/Data/TestJSON/hotline.json';
 		const response = await fetch(url);
 		return await response.json();
 	} catch (error) {
@@ -24,10 +22,10 @@ const displayHotlines = data => {
 	}
 
 	data.forEach(({ title, types }) => {
-		createElementAndAppend(document.body, 'div', 'hotlineList', null, [ 'searchHotline' ]);
-		createElementAndAppend(hotlineList, 'div', 'hotlineTitle')
+		const hotlineList = createElementAndAppend(document.body, 'div', 'hotlineList', null, [ 'searchHotline' ]);
+		const hotlineTitle = createElementAndAppend(hotlineList, 'div', 'hotlineTitle')
 		createElementAndAppend(hotlineTitle, 'h2', null, title)
-		createElementAndAppend(hotlineTitle, 'div', 'hotlineName')
+		const hotlineName = createElementAndAppend(hotlineTitle, 'div', 'hotlineName')
 		types.forEach(({ name, link }) => {
 			createElementAndAppend(hotlineName, 'a', null, name).href = link;
 		});
@@ -54,3 +52,6 @@ searchInput.addEventListener('keyup', ({ target }) => {
 	if (searchTimeout) clearTimeout(searchTimeout);
 	searchTimeout = setTimeout(runSearch, 500);
 });
+
+
+(async () => displayHotlines(await getHotlineData()))();
