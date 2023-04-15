@@ -32,26 +32,3 @@ const displayHotlines = data => {
 	});
 }
 
-let searchTimeout = null;
-const searchInput = document.querySelector('#search');
-
-searchInput.addEventListener('keyup', ({ target }) => {
-	// This function will run after 500ms of no keypress
-	const runSearch = () => {
-		const searchText = target.value.toLowerCase();
-		const searchElements = '.searchHotline h2, .searchHotline p';
-		const elements = document.querySelectorAll(searchElements);
-		elements.forEach(element => {
-			const text = element.innerText.toLowerCase();
-			const found = text.indexOf(searchText) > -1;
-			const display = found ? 'block' : 'none';
-			element.parentElement.style.display = display;
-		});
-	}
-
-	if (searchTimeout) clearTimeout(searchTimeout);
-	searchTimeout = setTimeout(runSearch, 500);
-});
-
-
-(async () => displayHotlines(await getHotlineData()))();
