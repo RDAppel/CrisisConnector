@@ -46,14 +46,13 @@ class CustomNavbar extends HTMLElement {
         right: 0; 
       }
       
-      #menuToggle span
-      {
+      #menuToggle span {
         display: flex;
         width: 29px;
         height: 2px;
         margin-bottom: 5px;
         position: relative;
-        background: #ffffff;
+        background: #ffffff !important;
         border-radius: 3px;
         z-index: 1;
         transform-origin: 5px 0px;
@@ -96,21 +95,31 @@ class CustomNavbar extends HTMLElement {
      
       
       #menu {
-        
-        display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 65px;
         right: 0;
-        width: 65vw;
-        height: 300px;
+        width: 20%;
+        height: 20%;
+        font-color: #ffffff;
         box-shadow: 0 0 10px #85888C;
         margin: 0;
         padding: 50px 0;
-        background-color: #F5F6FA;
+        background: linear-gradient(to right, #0f0c29, #302b63, #24243e); 
         -webkit-font-smoothing: antialiased;
         transform-origin: 100% 0;
         transform: translateX(100%);
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        z-index: 999;
+      }
+      
+      @media screen and (max-width: 768px) {
+        #menu {
+          width: 30%;
+          height: 22%;
+          background: linear-gradient(to right, #0f0c29, #302b63, #24243e); 
+          
+          
+        }
       }
 
       #menuToggle input:checked ~ #menu {
@@ -124,10 +133,25 @@ class CustomNavbar extends HTMLElement {
         transition-delay: 2s;
       }
       
+      #menu li a {
+        color: #ffffff;
+      }
+      
       #menuToggle input:checked ~ ul
       {
         transform: none;
       }
+
+     
+        
+        
+
+        #menu li {
+          padding: 10px 20px;
+          font-size: 1.2em;
+      }
+    }
+      
 
       .logo-container {
         display: flex;
@@ -138,8 +162,8 @@ class CustomNavbar extends HTMLElement {
       }
   
       .logo-image {
-        margin-top: 35px;
-        width: 100px;
+        margin-top: -25px;
+        width: 90px;
       }
       </style>
     <nav role="navigation">
@@ -159,7 +183,7 @@ class CustomNavbar extends HTMLElement {
         
         </div>
         <div class="logo-container">
-          <img class="logo-image" src="../Assets/Icons/CrisCon.svg" alt="Brand Logo">
+          <img class="logo-image" src="../Assets/Icons/Logo1.png" alt="Brand Logo">
       </div>
     </nav>
       `;
