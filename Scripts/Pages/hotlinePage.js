@@ -64,8 +64,6 @@
 		if (searchTimeout) clearTimeout(searchTimeout);
 		searchTimeout = setTimeout(runSearch, 200);
 	});
-
-	
 	
 	displayHotlines(await getHotlineData())
 
